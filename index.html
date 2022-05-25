@@ -26,37 +26,67 @@
       <!-- Navigation side -->
       <div class="header__navigation container">
         <nav class="navigation">
-          <a class="logo" href="./index.html">Web<span class="logo--header">Studio</span> </a>
-          <ul class="navigation__list">
-            <li class="navigation__item">
-              <a class="navigation__link navigation__link--active" href="./index.html">Студия</a>
-            </li>
-            <li class="navigation__item">
-              <a class="navigation__link" href="./portfolio.html">Портфолио</a>
-            </li>
-            <li class="navigation__item">
-              <a class="navigation__link" href="#">Контакты</a>
-            </li>
-          </ul>
-        </nav>
+          <a class="logo" href="./index.html">Web<span class="logo--header">Studio</span></a>
 
-        <!-- Contact side -->
-        <ul class="contacts">
-          <li class="contacts__item">
-            <a class="contacts__link" href="mailto:info@devstudio.com">
-              <svg class="contacts__icon" width="16px" height="12px">
-                <use href="./images/icons.svg#icon-envelope"></use></svg
-              >info@devstudio.com</a
-            >
-          </li>
-          <li class="contacts__item">
-            <a class="contacts__link" href="tel:+380961111111">
-              <svg class="contacts__icon" width="10px" height="16px">
-                <use href="./images/icons.svg#icon-smartphone"></use></svg
-              >+38 096 111 11 11</a
-            >
-          </li>
-        </ul>
+          <button
+            class="menu"
+            type="button"
+            aria-expanded="false"
+            aria-controls="navigation__menu"
+            data-menu-button
+          >
+            <svg class="menu__icon" aria-label="Мобильное меню">
+              <use class="menu__close" href="./images/icons.svg#icon-menu-close"></use>
+              <use class="menu__open" href="./images/icons.svg#icon-menu-open"></use>
+            </svg>
+          </button>
+          <div class="navigation__menu" id="navigation__menu">
+            <ul class="navigation__list">
+              <li class="navigation__item">
+                <a class="navigation__link navigation__link--active" href="./index.html">Студия</a>
+              </li>
+              <li class="navigation__item">
+                <a class="navigation__link" href="./portfolio.html">Портфолио</a>
+              </li>
+              <li class="navigation__item">
+                <a class="navigation__link" href="#">Контакты</a>
+              </li>
+            </ul>
+
+            <!-- Contact side -->
+            <ul class="contacts">
+              <li class="contacts__item">
+                <a class="contacts__link" href="mailto:info@devstudio.com">
+                  <svg class="contacts__icon" width="16px" height="12px">
+                    <use href="./images/icons.svg#icon-envelope"></use></svg
+                  >info@devstudio.com</a
+                >
+              </li>
+              <li class="contacts__item">
+                <a class="contacts__link" href="tel:+380961111111">
+                  <svg class="contacts__icon" width="10px" height="16px">
+                    <use href="./images/icons.svg#icon-smartphone"></use></svg
+                  >+38 096 111 11 11</a
+                >
+              </li>
+            </ul>
+
+            <ul class="social-mob__link">
+              <li class="social-mob__list">
+                <a class="social-mob__link" href="#">Instagram</a>
+              </li>
+              <li class="social-mob__list">
+                <a class="social-mob__link" href="#">Twitter</a>
+              </li>
+              <li class="social-mob__list">
+                <a class="social-mob__link" href="#">Facebook</a>
+              </li>
+              <li class="social-mob__list">
+                <a class="social-mob__link" href="#">LinkedIn</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
       </div>
     </header>
 
@@ -138,7 +168,7 @@
           <ul class="about-us__list">
             <li class="about-us__item">
               <img
-                src="./images/about-us/about-1.jpg"
+                src="./images/desktop/about-us/about-1.jpg"
                 alt="Программист работает в офисе"
                 width="370"
                 height="294"
@@ -148,7 +178,7 @@
 
             <li class="about-us__item">
               <img
-                src="./images/about-us/about-2.jpg"
+                src="./images/desktop/about-us/about-2.jpg"
                 alt="Дизайнер разрабатывает приложения для смартфон"
                 width="370"
                 height="294"
@@ -158,7 +188,7 @@
 
             <li class="about-us__item">
               <img
-                src="./images/about-us/about-3.jpg"
+                src="./images/desktop/about-us/about-3.jpg"
                 alt="Креативный веб-дизайн художника с рабочим цветом"
                 width="370"
                 height="294"
@@ -177,7 +207,7 @@
           <ul class="team__list">
             <li class="team__item">
               <img
-                src="./images/team/team-1.jpg"
+                src="./images/desktop/team/team-1.jpg"
                 alt="Дизайнер продукта"
                 width="270"
                 height="260"
@@ -248,7 +278,7 @@
 
             <li class="team__item">
               <img
-                src="./images/team/team-2.jpg"
+                src="./images/desktop/team/team-2.jpg"
                 alt="Дизайнер продукта"
                 width="270"
                 height="260"
@@ -319,7 +349,7 @@
 
             <li class="team__item">
               <img
-                src="./images/team/team-3.jpg"
+                src="./images/desktop/team/team-3.jpg"
                 alt="Дизайнер продукта"
                 width="270"
                 height="260"
@@ -390,7 +420,7 @@
 
             <li class="team__item">
               <img
-                src="./images/team/team-4.jpg"
+                src="./images/desktop/team/team-4.jpg"
                 alt="Дизайнер продукта"
                 width="270"
                 height="260"
@@ -694,5 +724,6 @@
       </div>
     </div>
     <script src="./js/modal.js"></script>
+    <script src="./js/mobile-menu.js"></script>
   </body>
 </html>
