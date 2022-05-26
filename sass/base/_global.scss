@@ -25,22 +25,28 @@ img {
 }
 
 .container {
-    width: 1200px;
+    max-width: 1200px;
     margin: 0 auto;
     padding: 0 15px;
 }
 
 .section {
-    padding: 94px 0;
+    padding: 60px 0;
+
+    @media screen and (min-width: getSize(desktop)) {
+        padding: 94px 0;
+    }
 }
 
 .hidden {
     position: absolute;
+
+    margin: -1px;
+    padding: 0;
     width: 1px;
     height: 1px;
-    margin: -1px;
+
     border: 0;
-    padding: 0;
 
     white-space: nowrap;
     clip-path: inset(100%);
@@ -56,4 +62,39 @@ img {
 %link {
     text-decoration: none;
     color: currentColor;
+}
+
+%title {
+    margin-bottom: 50px;
+
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.16;
+    text-align: center;
+    letter-spacing: 0.03em;
+    color: getColor(primary);
+
+    @media screen and (max-width: getSize(desktop)) {
+        margin-bottom: 30px;
+    }
+}
+
+%btn {
+    display: block;
+    padding: 10px 32px;
+
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.88;
+    text-align: center;
+    letter-spacing: 0.06em;
+    color: getColor(active-white);
+    background-color: getColor(accent);
+
+    border: none;
+    border-radius: 4px;
+
+    box-shadow: getShadow(button);
+
+    cursor: pointer;
 }

@@ -12,6 +12,7 @@
 
 .checkbox-group__item {
     position: relative;
+    
     width: 16px;
     height: 15px;
 }
@@ -38,17 +39,18 @@
     }
 }
 
-.checkbox-group__input:focus + .checkbox-group__custom {
+.checkbox-group__input:focus+.checkbox-group__custom {
     border-color: getColor(btn-hover);
 }
 
-.checkbox-group__input:checked + .checkbox-group__custom {
+.checkbox-group__input:checked+.checkbox-group__custom {
     background-color: getColor(accent);
     border-color: getColor(accent);
 }
 
 .checkbox-group__icon {
     position: absolute;
+
     width: 16px;
     height: 15px;
 
@@ -59,7 +61,7 @@
         opasity getProperty(duration) getProperty(cubic);
 }
 
-.checkbox-group__input:checked ~ .checkbox-group__icon {
+.checkbox-group__input:checked~.checkbox-group__icon {
     transform: scale(1);
     opacity: 1;
 }
@@ -80,8 +82,10 @@
 }
 
 .btn--form {
+    @extend %btn;
+
     margin-right: auto;
-    margin-left: auto;  
+    margin-left: auto;
     width: 200px;
     height: 50px;
 }

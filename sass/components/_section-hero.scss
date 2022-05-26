@@ -1,53 +1,68 @@
-// Hero section
 .hero {
-    padding: 200px 0;
-    margin: 0 auto;
-    max-width: 1600px;
-    height: 600px;
+    padding: 118px 0;
 
-    text-align: center;
-
-    background-color: getColor(background);
     background-image: linear-gradient(to right, getColor(gradient-overlay), getColor(gradient-overlay)),
-        url(../images/action-bg.jpg);
+    url(../images/mobile/action-bg.jpg);
     background-repeat: no-repeat;
     background-size: cover;
+
+
+    @media (min-device-pixel-ratio: 2),
+        (min-resolution: 192dpi),
+        (min-resolution: 2dppx) {
+            background-image: linear-gradient(to right, getColor(gradient-overlay), getColor(gradient-overlay)),
+            url(../images/mobile/action-bg@2x.jpg);
+        }
+
+    @media (min-device-pixel-ratio: 3),
+        (min-resolution: 288dpi),
+        (min-resolution: 3dppx) {
+            background-image: linear-gradient(to right, getColor(gradient-overlay), getColor(gradient-overlay)),
+            url(../images/mobile/action-bg@3x.jpg);
+        }
+
+    // Tablet
+
+    @media screen and (min-width: getSize(tablet)) {
+        background-image: linear-gradient(to right, getColor(gradient-overlay), getColor(gradient-overlay)),
+        url(../images/tablet/action-bg.jpg);
+
+        @media (min-device-pixel-ratio: 2),
+            (min-resolution: 192dpi),
+            (min-resolution: 2dppx) {
+                background-image: linear-gradient(to right, getColor(gradient-overlay), getColor(gradient-overlay)),
+                url(../images/tablet/action-bg@2x.jpg);
+            }
+        
+            @media (min-device-pixel-ratio: 3),
+            (min-resolution: 288dpi),
+            (min-resolution: 3dppx) {
+                background-image: linear-gradient(to right, getColor(gradient-overlay), getColor(gradient-overlay)),
+                url(../images/tablet/action-bg@3x.jpg);
+            }
+    }
 }
 
 .hero__title {
+    margin: 0 auto;
     margin-bottom: 30px;
 
     font-weight: 900;
-    line-height: 1.36;
-    font-size: 44px;
+    font-size: 26px;
+    line-height: 1.62;
+    text-align: center;
     letter-spacing: 0.06em;
     text-transform: uppercase;
     color: getColor(active-white);
+
+    @media screen and (min-width: getSize(desktop)) {
+        font-size: 44px;
+        line-height: 1.36;
+    }
 }
 
 .btn {
-    padding: 10px 32px;
+    @extend %btn;
 
-    font-weight: 700;
-    font-size: 16px;
-    line-height: 1.88;
-    letter-spacing: 0.06em;
-
-    color: getColor(active-white);
-    background-color: getColor(accent);
-    box-shadow: getShadow(button);
-
-    border: none;
-    border-radius: 4px;
-
-    transition: background-color getProperty(duration) getProperty(cubic),
-        box-shadow getProperty(duration) getProperty(cubic);
-
-    cursor: pointer;
-
-    &:hover,
-    &:focus {
-        background-color: getColor(btn-hover);
-        box-shadow: getShadow(button-hover);
-    }
+    margin: 0 auto;
 }

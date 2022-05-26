@@ -1,5 +1,6 @@
 .logo {
     @extend %link;
+    
     font-family: getFont(logo);
     font-weight: 700;
     font-size: 26px;

@@ -58,6 +58,7 @@
     position: absolute;
     top: 50%;
     left: 0;
+    
     margin-left: 12px;
 
     transform: translateY(-50%);
@@ -91,14 +92,14 @@
     border: 1px solid getColor(border-black);
     border-radius: 4px;
 
-    &:hover, 
+    &:hover,
     &:focus {
         border-color: getColor(accent);
-            outline: none;
+        outline: none;
     }
 }
 
-.input-group__input:hover + .input-group__icon,
-.input-group__input:focus + .input-group__icon {
+.input-group__input:hover+.input-group__icon,
+.input-group__input:focus+.input-group__icon {
     fill: getColor(accent);
 }
