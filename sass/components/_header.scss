@@ -145,6 +145,13 @@
 .navigation__link {
     @extend %link;
 
+    transition: color getProperty(duration) getProperty(color);
+
+    &:hover,
+    &:focus {
+        color: getColor(accent);
+    }
+
     &--active {
         color: getColor(accent);
     }
@@ -245,11 +252,33 @@
 .contacts__link {
     @extend %link;
 
+    transition: color getProperty(duration) getProperty(color);
+    
+    &:hover,
+    &:focus {
+        color: getColor(accent);
+    }
+
+    @media screen and (max-width: getSize(tablet)) {
+        &--phone {
+            transition: color getProperty(duration) getProperty(color),
+                background-color getProperty(duration) getProperty(color);
+        }
+
+        &--phone:hover,
+        &--phone:focus {
+            background-color: getColor(accent);
+            color: getColor(active-white);
+            border-radius: 2px;
+        }
+    }
+
     @media screen and (min-width: getSize(tablet)) {
         display: flex;
         align-items: center;
     }
 }
+
 
 .contacts__icon {
     display: none;
@@ -325,4 +354,14 @@
 
 .social-mob__link {
     @extend %link;
+
+    transition: color getProperty(duration) getProperty(color),
+        background-color getProperty(duration) getProperty(color);
+    
+    &:hover,
+    &:focus {
+        background-color: getColor(accent);
+        color: getColor(active-white);
+        border-radius: 2px;
+    }
 }

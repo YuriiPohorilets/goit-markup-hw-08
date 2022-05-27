@@ -261,6 +261,15 @@ img {
   }
 }
 
+.navigation__link {
+  -webkit-transition: color 250ms;
+  transition: color 250ms;
+}
+
+.navigation__link:hover, .navigation__link:focus {
+  color: #2196f3;
+}
+
 .navigation__link--active {
   color: #2196f3;
 }
@@ -362,6 +371,27 @@ img {
   }
 }
 
+.contacts__link {
+  -webkit-transition: color 250ms;
+  transition: color 250ms;
+}
+
+.contacts__link:hover, .contacts__link:focus {
+  color: #2196f3;
+}
+
+@media screen and (max-width: 768px) {
+  .contacts__link--phone {
+    -webkit-transition: color 250ms, background-color 250ms;
+    transition: color 250ms, background-color 250ms;
+  }
+  .contacts__link--phone:hover, .contacts__link--phone:focus {
+    background-color: #2196f3;
+    color: #ffffff;
+    border-radius: 2px;
+  }
+}
+
 @media screen and (min-width: 768px) {
   .contacts__link {
     display: -webkit-box;
@@ -450,6 +480,17 @@ img {
   width: 1px;
   height: 22px;
   background-color: #2196f3;
+}
+
+.social-mob__link {
+  -webkit-transition: color 250ms, background-color 250ms;
+  transition: color 250ms, background-color 250ms;
+}
+
+.social-mob__link:hover, .social-mob__link:focus {
+  background-color: #2196f3;
+  color: #ffffff;
+  border-radius: 2px;
 }
 
 .hero {
