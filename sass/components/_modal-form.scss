@@ -15,6 +15,14 @@
     letter-spacing: 0.03em;
     text-align: center;
     color: getColor(primary);
+
+    @media screen and (max-width: getSize(desktop)) {
+        line-height: 1.5;
+    }
+
+    @media screen and (min-width: getSize(desktop)) {
+        line-height: 1.15;
+    }
 }
 
 .form__list {

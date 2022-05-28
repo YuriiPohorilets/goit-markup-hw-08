@@ -26,14 +26,17 @@
 
     transform: translate(-50%, -50%) scale(1);
 
-    width: 528px;
-    height: 581px;
+    max-width: 528px;
 
     background-color: getColor(active-white);
     box-shadow: getShadow(team-card);
     border-radius: 4px;
 
     transition: transform getProperty(duration) getProperty(cubic);
+
+    @media screen and (min-width: getSize(mobile)) {
+        min-width: 450px;
+    }
 }
 
 .backdrop--is-hidden .modal {

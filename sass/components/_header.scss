@@ -46,7 +46,7 @@
 
 .menu__open {
     transition: transform 500ms getProperty(cubic),
-    opacity 500ms getProperty(cubic);
+        opacity 500ms getProperty(cubic);
 }
 
 // Open menu
@@ -89,7 +89,8 @@
 
     background-color: getColor(active-white);
 
-    transition: transform getProperty(duration) getProperty(cubic);
+    transition: transform getProperty(duration) getProperty(cubic),
+        visibility getProperty(duration) getProperty(cubic);
 
     @media screen and (min-width: getSize(tablet)) {
         position: static;
@@ -106,6 +107,10 @@
         pointer-events: all;
         transform: translate(0);
         visibility: visible;
+    }
+
+    @media screen and (min-width: getSize(tablet)) {
+        margin-left: 93px;
     }
 }
 

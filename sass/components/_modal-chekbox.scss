@@ -68,6 +68,16 @@
 
 .checkbox-group__label {
     margin-left: 7px;
+
+    @media screen and (max-width: getSize(desktop)) {
+        font-size: 12px;
+        line-height: 1.17;
+    }
+
+    @media screen and (min-width: getSize(desktop)) {
+        font-size: 14px;
+        line-height: 1.71;
+    }
 }
 
 .checkbox-group__link {
