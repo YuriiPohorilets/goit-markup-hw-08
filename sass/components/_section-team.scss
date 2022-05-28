@@ -1,0 +1,80 @@
+.team {
+    background-color: getColor(btn-bg);
+}
+
+.team__list {
+    @extend %list;
+}
+
+.team__item {
+    background-color: getColor(active-white);
+    box-shadow: getShadow(team-card);
+    border-radius: 0px 0px 4px 4px;
+
+    &:not(:last-child) {
+        margin-bottom: 30px;
+    }
+}
+
+.card {
+    padding-top: 30px;
+    padding-bottom: 24px;
+}
+
+.card__name {
+    margin-bottom: 10px;
+
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.19;
+    text-align: center;
+    letter-spacing: 0.03em;
+    color: getColor(primary);
+}
+
+.card__position {
+    margin-bottom: 16px;
+
+    font-size: 16px;
+    line-height: 1.19;
+    text-align: center;
+    letter-spacing: 0.03em;
+    color: getColor(secondary);
+}
+
+.social {
+    @extend %list;
+
+    display: flex;
+    justify-content: center;
+    color: getColor(icon);
+}
+
+.social__list {
+
+    &:not(:last-child) {
+        margin-right: 22px;
+    }
+}
+
+.social__link {
+    @extend %link;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 20px;
+    height: 20px;
+
+    border-radius: 50%;
+
+    transition: color getProperty(duration) getProperty(cubic,
+        background-color getProperty(duration) getProperty(cubic));
+
+    &:hover,
+    &:focus {
+        color: getColor(accent);
+        background-color: getColor(accent);
+    }
+}
