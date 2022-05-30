@@ -4,15 +4,52 @@
 
 .team__list {
     @extend %list;
+
+    @media screen and (min-width: getSize(tablet)) {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+
+        margin-top: -30px;
+        margin-left: -30px;
+    }
+
+    @media screen and (min-width: getSize(desktop)) {
+        flex-wrap: nowrap;
+        margin: 0;
+    }
 }
 
 .team__item {
+    margin: 0 auto;
+    margin-bottom: 30px;
+
+    max-width: 450px;
+
     background-color: getColor(active-white);
     box-shadow: getShadow(team-card);
     border-radius: 0px 0px 4px 4px;
 
-    &:not(:last-child) {
-        margin-bottom: 30px;
+    &:last-child {
+        margin-bottom: 0;
+    }
+
+    @media screen and (min-width: getSize(tablet)) {
+        margin-top: 30px;
+        margin-right: 0;
+        margin-left: 30px;
+        margin-bottom: 0;
+
+        flex-basis: calc((100% - 60px) / 2);
+    }
+
+    @media screen and (min-width: getSize(desktop)) {
+        margin: 0;
+        flex-basis: calc((100% - 90px) / 4);
+
+        &:not(:last-child) {
+            margin-right: 30px;
+        }
     }
 }
 
@@ -53,7 +90,7 @@
 .social__list {
 
     &:not(:last-child) {
-        margin-right: 22px;
+        margin-right: 10px;
     }
 }
 
@@ -64,17 +101,24 @@
     justify-content: center;
     align-items: center;
 
-    width: 20px;
-    height: 20px;
+    width: 44px;
+    height: 44px;
 
     border-radius: 50%;
 
-    transition: color getProperty(duration) getProperty(cubic,
-        background-color getProperty(duration) getProperty(cubic));
+    transition: color getProperty(duration) getProperty(cubic),
+        background-color getProperty(duration) getProperty(cubic);
 
     &:hover,
     &:focus {
-        color: getColor(accent);
+        color: getColor(active-white);
         background-color: getColor(accent);
     }
+}
+
+.social__icon {
+    width: 20px;
+    height: 20px;
+
+    fill: currentColor;
 }
