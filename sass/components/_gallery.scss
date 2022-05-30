@@ -6,6 +6,8 @@
     flex-wrap: wrap;
     justify-content: flex-start;
 
+    margin-bottom: 40px;
+
     @media screen and (min-width: getSize(tablet)) {
         justify-content: center;
     }
@@ -52,8 +54,113 @@
 // Gallery
 .gallery {
     @extend %list;
+
+    @media screen and (min-width: getSize(tablet)) {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+
+        margin-top: - getProperty(gap-gallery);
+        margin-left: - getProperty(gap-gallery);
+    }
+}
+
+.gallery__item {
+    margin: 0 auto;
+    margin-bottom: getProperty(gap-gallery);
+
+    max-width: max-content;
+    background-color: getColor(active-white);
+    transition: box-shadow getProperty(duration) getProperty(cubic);
+    &:last-child {
+        margin-bottom: 0;
+    }
+
+    &:hover,
+    &:focus {
+        box-shadow: getShadow(gallery-card);
+    }
+
+    @media screen and (min-width: getSize(tablet)) {
+        margin-top: getProperty(gap-gallery);
+        margin-right: 0;
+        margin-bottom: 0;
+        margin-left: getProperty(gap-gallery);
+
+        flex-basis: calc((100% - 60px) / 2);
+    }
+
+    @media screen and (min-width: getSize(desktop)) {
+        flex-basis: calc((100% - 90px) / 3);
+    }
+}
+
+.gallery__item:hover .gallery__overlay,
+.gallery__item:focus .gallery__overlay {
+    transform: translateY(0)
 }
 
 .gallery__link {
     @extend %link;
+    height: 100%;
+
+    @media screen and (min-width: getSize(tablet)) {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+.gallery__thumb {
+    position: relative;
+    overflow: hidden;
+}
+
+.gallery__overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    transform: translateY(100%);
+
+    background-color: getColor(accent-opacity);
+
+    transition: transform getProperty(duration) getProperty(cubic);
+}
+
+.gallery__description {
+    padding: 77px 24px;
+
+    font-size: 18px;
+    line-height: 1.56;
+    letter-spacing: 0.03em;
+    color: getColor(active-white);
+}
+
+.gallery__header {
+    padding: 20px 24px;
+    border: 1px solid getColor(card);
+    border-top: none;
+
+    @media screen and (min-width: getSize(tablet)) {
+        flex-grow: 1;
+    }
+}
+
+.gallery__title {
+    margin-bottom: 4px;
+
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 2.0;
+    letter-spacing: 0.06em;
+    color: getColor(primary);
+}
+
+.gallery__text {
+    font-size: 16px;
+    line-height: 1.88;
+    letter-spacing: 0.03em;
 }
