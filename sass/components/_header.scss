@@ -17,7 +17,7 @@
 
     transition: fill getProperty(duration) getProperty(cubic);
 
-    z-index: 999;
+    z-index: 2;
 
     cursor: pointer;
 
@@ -77,7 +77,7 @@
     padding-bottom: 48px;
     padding-left: 40px;
 
-    width: 100%;
+    width: 100vw;
     height: 100vh;
 
     flex-direction: column;
@@ -86,6 +86,7 @@
     pointer-events: none;
     transform: translateX(-100%);
     visibility: hidden;
+    z-index: 0; 
 
     background-color: getColor(active-white);
 
@@ -104,6 +105,7 @@
 
         height: 100%;
 
+        background-color: transparent;
         pointer-events: all;
         transform: translate(0);
         visibility: visible;

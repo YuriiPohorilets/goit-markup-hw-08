@@ -34,6 +34,8 @@
 
     transition: transform getProperty(duration) getProperty(cubic);
 
+    z-index: 999;
+
     @media screen and (min-width: getSize(mobile)) {
         min-width: 450px;
     }
