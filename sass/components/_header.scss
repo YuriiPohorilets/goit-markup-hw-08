@@ -83,6 +83,7 @@
     flex-direction: column;
     justify-content: space-between;
 
+    overflow: auto;
     pointer-events: none;
     transform: translateX(-100%);
     visibility: hidden;

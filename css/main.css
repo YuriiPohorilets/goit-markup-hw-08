@@ -193,6 +193,7 @@ img {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  overflow: auto;
   pointer-events: none;
   -webkit-transform: translateX(-100%);
           transform: translateX(-100%);
