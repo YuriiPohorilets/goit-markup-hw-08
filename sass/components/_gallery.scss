@@ -131,12 +131,20 @@
 }
 
 .gallery__description {
-    padding: 77px 24px;
-
     font-size: 18px;
     line-height: 1.56;
     letter-spacing: 0.03em;
     color: getColor(active-white);
+
+    @media screen and (max-width: getSize(mobile)) {
+        padding: calc(5px + 5vw) 24px;
+        font-size: calc(9px + 2vw);
+    }
+
+    @media screen and (min-width: getSize(mobile)) {
+        padding: 77px 24px;
+        font-size: 18px;
+    }
 }
 
 .gallery__header {

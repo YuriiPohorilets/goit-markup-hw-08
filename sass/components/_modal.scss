@@ -12,6 +12,8 @@
     transition: opacity getProperty(duration) getProperty(cubic);
 
     opacity: 1;
+    
+    z-index: 998;
 }
 
 .backdrop--is-hidden {
