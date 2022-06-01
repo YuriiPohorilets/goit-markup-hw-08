@@ -1,9 +1,17 @@
 // Modal form
 .form {
     display: flex;
-    padding: 40px;
 
     flex-direction: column;
+
+    @media screen and (max-width: getSize(mobile)) {
+        padding: 20px;
+        min-width: 90vw;
+    }
+
+    @media screen and (min-width: getSize(mobile)) {
+        padding: 40px;
+    }
 }
 
 .form__title {
@@ -15,7 +23,7 @@
     letter-spacing: 0.03em;
     text-align: center;
     color: getColor(primary);
-
+    
     @media screen and (max-width: getSize(desktop)) {
         line-height: 1.5;
     }
@@ -37,7 +45,7 @@
     margin-bottom: 10px;
 
     &:last-child {
-        margin-bottom: 20px;
+        margin-bottom: 0;
     }
 }
 

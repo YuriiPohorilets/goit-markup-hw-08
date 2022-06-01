@@ -789,7 +789,7 @@
             <div class="input-group">
               <label class="input-group__label" for="user-name">Имя</label>
               <div class="input-group__item">
-                <input class="input-group__input" type="text" name="name" id="user-name" />
+                <input class="input-group__input" type="text" name="name" id="user-name" required />
                 <svg class="input-group__icon">
                   <use href="./images/icons.svg#icon-person"></use>
                 </svg>
@@ -799,7 +799,13 @@
             <div class="input-group">
               <label class="input-group__label" for="user-phone">Телефон</label>
               <div class="input-group__item">
-                <input class="input-group__input" type="text" name="phone" id="user-phone" />
+                <input
+                  class="input-group__input"
+                  type="text"
+                  name="phone"
+                  id="user-phone"
+                  required
+                />
                 <svg class="input-group__icon">
                   <use href="./images/icons.svg#icon-phone"></use>
                 </svg>
@@ -809,7 +815,13 @@
             <div class="input-group">
               <label class="input-group__label" for="user-email">Почта</label>
               <div class="input-group__item">
-                <input class="input-group__input" type="email" name="email" id="user-email" />
+                <input
+                  class="input-group__input"
+                  type="email"
+                  name="email"
+                  id="user-email"
+                  required
+                />
                 <svg class="input-group__icon">
                   <use href="./images/icons.svg#icon-email"></use>
                 </svg>
@@ -829,7 +841,7 @@
 
           <label class="checkbox-group">
             <span class="checkbox-group__item">
-              <input class="checkbox-group__input hidden" type="checkbox" />
+              <input class="checkbox-group__input hidden" type="checkbox" required />
               <span class="checkbox-group__custom"></span>
               <svg class="checkbox-group__icon">
                 <use href="./images/icons.svg#icon-check"></use>

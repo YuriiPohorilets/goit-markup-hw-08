@@ -28,6 +28,18 @@ img {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 15px;
+
+    @media screen and (min-width: getSize(mobile)) {
+        width: getSize(mobile);
+    }
+
+    @media screen and (min-width: getSize(tablet)) {
+        width: getSize(tablet);
+    }
+
+    @media screen and (min-width: getSize(desktop)) {
+        width: getSize(desktop);
+    }
 }
 
 .section {

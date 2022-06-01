@@ -5,8 +5,8 @@
     flex-wrap: wrap;
     justify-content: center;
 
-    margin-top: - getPropery(gap-gallery);
-    margin-left: - getPropery(gap-gallery);
+    margin-top: - getProperty(gap-gallery);
+    margin-left: - getProperty(gap-gallery);
 
     color: getColor(icon);
 

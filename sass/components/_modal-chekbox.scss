@@ -1,13 +1,22 @@
 // Checkbox
 .checkbox-group {
     display: flex;
-    margin-bottom: 30px;
 
     justify-content: center;
     align-items: center;
 
     line-height: 1.71;
     letter-spacing: 0.03em;
+
+    @media screen and (max-width: getSize(mobile)) {
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+
+    @media screen and (min-width: getSize(mobile)) {
+        margin-top: 20px;
+        margin-bottom: 30px;
+    }
 }
 
 .checkbox-group__item {
